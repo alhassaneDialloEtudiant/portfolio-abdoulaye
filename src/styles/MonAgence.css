@@ -1,0 +1,222 @@
+/* ===== Conteneur principal ===== */
+.agence-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* ===== Header de l'agence ===== */
+.agence-header {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #00d69d, #00b38f);
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: slideIn 1s ease forwards;
+}
+
+.agence-logo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.agence-slogan {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+/* ===== Container du bouton CTA ===== */
+.cta-container {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ===== Bouton Me Contacter ===== */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: white;
+  color: #00c7a2;
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  max-width: 320px;
+  width: 100%;
+}
+
+.cta-button:hover {
+  background-color: #e0faf6;
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-icon {
+  font-size: 1.5rem;
+}
+
+/* ===== Section Services ===== */
+.services-section {
+  margin-top: 5rem;
+}
+
+.services-section h2 {
+  font-size: 2.3rem;
+  color: #222;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.services-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #00d69d;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Section Pourquoi Choisir ===== */
+.why-choose {
+  margin-top: 5rem;
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose h2 {
+  font-size: 2.3rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.why-choose h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #00d69d;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.why-choose ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-choose li {
+  font-size: 1.1rem;
+  color: #555;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: #00d69d;
+}
+
+.why-icon {
+  font-size: 1.8rem;
+  color: #00b38f;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .agence-header {
+    padding: 3rem 1.5rem;
+  }
+
+  .agence-logo {
+    font-size: 2.2rem;
+  }
+
+  .agence-slogan {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .services-section h2,
+  .why-choose h2 {
+    font-size: 1.8rem;
+  }
+
+  .why-choose ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .agence-header {
+    padding: 2.5rem 1rem;
+  }
+
+  .cta-button {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .services-section h2,
+  .why-choose h2 {
+    font-size: 1.6rem;
+  }
+}

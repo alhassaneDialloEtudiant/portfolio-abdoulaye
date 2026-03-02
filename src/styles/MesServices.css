@@ -1,0 +1,106 @@
+/* ===== Conteneur Principal ===== */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  /* ===== Titre Principal ===== */
+  .services-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .services-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #00d69d;
+    margin: 0.5rem auto 0;
+    border-radius: 3px;
+  }
+  
+  /* ===== Introduction ===== */
+  .services-intro {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 3rem;
+  }
+  
+  /* ===== Grille de Services ===== */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* ===== Carte Service ===== */
+  .service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* ===== Icône Service ===== */
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ===== Titre Service ===== */
+  .service-card h4 {
+    font-size: 1.4rem;
+    color: #00d69d;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* ===== Description Service ===== */
+  .service-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* ===== Call To Action (CTA) ===== */
+  .cta-container {
+    margin-top: 3rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #00d69d;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: #00c08a;
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .services-title {
+      font-size: 2rem;
+    }
+  
+    .services-intro {
+      font-size: 1rem;
+    }
+  }
+  
