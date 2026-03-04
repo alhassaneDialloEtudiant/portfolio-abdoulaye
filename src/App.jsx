@@ -10,18 +10,19 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router basename="/portfolio-abdoulaye"> {/* ✅ pour GitHub Pages */}
+    <Router>
       <Navbar />
-      <main> {/* ✅ structure flex pour footer collé */}
+
+      <main>
         <Routes>
-          <Route path="/" element={<Home />} /> {/* Route par défaut */}
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/apropos" element={<Apropos />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
-          
         </Routes>
       </main>
+
       <Footer />
     </Router>
   );
