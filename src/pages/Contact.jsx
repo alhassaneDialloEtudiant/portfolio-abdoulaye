@@ -66,16 +66,17 @@ function Contact() {
 
     setLoading(true);
 
-    emailjs.send(
-      'service_03l7g3z',
-      'template_app41kt',
-      {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message
-      },
-      'bjyEB1_Z-LwuLLicM' // 🔁 Remplace ici par ta clé publique EmailJS
-    )
+    emailjs
+      .send(
+        "service_kbwqunm",
+        "template_aaf1u8p",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.reason
+        },
+        "AmnqPHDXK4jt_6rN-"
+      )
     .then(() => {
       setLoading(false);
       setSuccess(true);
@@ -132,12 +133,6 @@ function Contact() {
             </div>
           )}
 
-          <div className="contact-direct">
-            <p>Ou contactez-moi directement : <strong>diallo.alhassane.pro@gmail.com</strong></p>
-            <p><a href="https://www.linkedin.com/in/ton-profil-linkedin/" target="_blank" rel="noreferrer" className="linkedin-link">
-              👉 Voir mon LinkedIn
-            </a></p>
-          </div>
         </>
       ) : (
         <motion.div className="success-animation" initial={{ scale: 0 }} animate={{ scale: 1.3 }} transition={{ duration: 0.8, ease: "easeOut" }}>
