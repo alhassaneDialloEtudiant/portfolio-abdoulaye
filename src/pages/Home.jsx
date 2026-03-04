@@ -26,27 +26,29 @@ function Home() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .send(
-        'service_03l7g3z',
-        'template_app41kt',
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.reason,
-        },
-        'bjyEB1_Z-LwuLLicM'
-      )
-      .then(() => {
-        setIsFormOpen(false);
-        setFormData({ name: '', email: '', reason: '' });
-        setIsConfirmationModalOpen(true);
-      })
-      .catch(() => {
-        alert("Erreur lors de l'envoi.");
-      });
-  };
+  e.preventDefault();
+
+  emailjs.send(
+  "service_kbwqunm",
+  "template_aaf1u8p",
+  {
+    name: formData.name,
+    email: formData.email,
+    message: formData.message
+  },
+  "AmnqPHDXK4jt_6rN-"
+    )
+    .then(() => {
+      setIsFormOpen(false);
+      setFormData({ name: '', email: '', message: '' });
+      setIsConfirmationModalOpen(true);
+    })
+    .catch(() => {
+      alert("Erreur lors de l'envoi.");
+    });
+};
+
+
 
   const goToPage = (path) => navigate(path);
 
@@ -125,7 +127,7 @@ function Home() {
                 <input name="email" placeholder="Email" onChange={handleInputChange} required />
               </div>
               <div className="form-group">
-                <textarea name="reason" placeholder="Motif" onChange={handleInputChange} required />
+                <textarea name="message" placeholder="Message" onChange={handleInputChange} required />
               </div>
               <button type="submit" className="form-button--submit">Envoyer</button>
             </form>
