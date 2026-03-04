@@ -7,11 +7,10 @@ import Home from './pages/Home';
 import Apropos from './pages/Apropos';
 import Projects from './pages/MonProjet';
 import Contact from './pages/Contact';
-import MonAgence from './pages/MonAgence';
 
 function App() {
   return (
-    <Router basename="/mon-portfolio"> {/* ✅ pour GitHub Pages */}
+    <Router basename="/portfolio-abdoulaye"> {/* ✅ pour GitHub Pages */}
       <Navbar />
       <main> {/* ✅ structure flex pour footer collé */}
         <Routes>
@@ -20,7 +19,7 @@ function App() {
           <Route path="/apropos" element={<Apropos />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/agence" element={<MonAgence />} />
+          
         </Routes>
       </main>
       <Footer />
