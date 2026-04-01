@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import logo from '../assets/photos/logo.png'; // Ton logo
+import logo from '../assets/photos/logo.jpeg'; // Ton logo
 import '../styles/Navbar.css'; // Le CSS mis à jour
 
 function Navbar() {
